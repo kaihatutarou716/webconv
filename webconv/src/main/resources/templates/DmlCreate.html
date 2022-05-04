@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta http-equiv="contents-Type" contents="text/html; charset=UTF-8" />
+
+    <title>オンラインWEBツール</title>
+    <link rel="stylesheet" th:href="@{css/DmlCreate.css}" type="text/css" />
+    <script type="text/javascript" th:src="@{js/library/jquery/jquery.min.js}" charset="UTF-8"></script>
+    <script type="text/javascript" th:src="@{js/Common.js}" charset="UTF-8"></script>
+    <script type="text/javascript" th:src="@{js/DmlCreate.js}" charset="UTF-8"></script>
+</head>
+
+<body>
+    <div id="header" th:include="Header">
+    </div>
+    <div id="side" th:include="SideMenu">
+    </div>
+    <br>
+    <div id="contents">
+        <div id="panel-Heading">
+            <h1 id="panel_Title">DML自動生成ツール</h1>
+            <div id="expBtn">
+                <h1><a href="" onclick="onExpLink('DmlCreate.pdf');">説明書</a></h1>
+            </div>
+        </div>
+        <br>
+        <div id="child_Contents">
+            <h3 id="options">オプション</h3>
+            <table style="width:300px;">
+                <tbody>
+                    <tr align="left">
+                        <td width="90px;">DML選択：</td>
+                        <td><label><select id="option01">
+                                    <option value="insert">INSERT文</option>
+                                </select></label></td>
+                    </tr>
+                    <tr align="left">
+                        <td width="90px;">区切り文字：</td>
+                        <td><label><select id="option02">
+                                    <option value="comma">カンマ</option>
+                                    <option value="tab">タブ</option>
+                                </select></label></td>
+                    </tr>
+                    <tr align="left">
+                        <td width="90px;">囲み文字：</td>
+                        <td><label><select id="option03">
+                                    <option value="dbleqtn">ダブルクォーテーション</option>
+                                    <option value="sleqtn">シングルクォーテーション</option>
+                                </select></label></td>
+                    </tr>
+                    <tr align="left">
+                        <td width="90px;">セミコロン：</td>
+                        <td><label><select id="option04">
+                                    <option value="semicolonOn">有</option>
+                                    <option value="semicolonOff">無</option>
+                                </select></label></td>
+                    </tr>
+                    <tr align="left">
+                        <td><br></td>
+                    </tr>
+                    <tr align="left">
+                        <td width="90px;">サンプル：</td>
+                        <td><label><select id="option50" onchange="changeSample()">
+                                    <option value="sampleOff">無</option>
+                                    <option value="sample01">インサート文(カンマ区切り)</option>
+                                    <option value="sample02">インサート文(タブ区切り)</option>
+                                </select></label></td>
+                    </tr>
+                    <tr align="left">
+                        <td><br></td>
+                    </tr>
+                    <tr align="left">
+                        <td style="width:90px; font-size:15px; color:rgb(241, 12, 12);">テーブル名：</td>
+                        <td><input type=“text” placeholder=テーブル名を入力 id="tbl_name"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <p> <textarea rows="18" cols="110" id="exeBefore_Area" style="overflow:scroll;font-family:'ＭＳ ゴシック',
+            sans-serif;" wrap="off" placeholder="テーブルデータを入力"></textarea></p>
+            <div class="cont_before_Btn">
+                <div class="before_Btn">
+                    <input type="button" id="resetBtn" value="リセット" onclick="formReset('exeBefore_Area');">
+                    <input type="button" id="exeBtn" value="実行"
+                        onclick="dataFormat('DmlCreate','exeBefore_Area','exeAfter_Area');">
+                </div>
+            </div>
+            <br>
+            <h3 id="cont_After_Title">実行後</h3>
+            <div class="cont_after_Btn">
+                <div class="after_Btn">
+                    <input type="button" value="リセット" onclick="formReset('exeAfter_Area');" id="resetBtn">
+                    <input type="button" value="コピー" onclick="copyToClipBoard('exeAfter_Area');" id="copyBtn">
+                </div>
+            </div>
+            <p> <textarea rows="18" cols="110" id="exeAfter_Area" style="overflow:scroll;font-family:'ＭＳ ゴシック',
+            sans-serif;" wrap="off" placeholder="生成したDML文を出力"></textarea></p>
+        </div>
+        <br>
+        <div id="footer">
+        </div>
+    </div>
+</body>
+
+</html>

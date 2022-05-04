@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    font-size: 12px;
+}
+
+body {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #f3f1f1;
+}
+
+#contents {
+    float: right;
+    width: 80%;
+    background-color: #FFFFFF;
+    border: solid 1px #beccea;
+    margin-bottom: 2em;
+}
+
+#child_Contents {
+    padding: 0px 20px;
+}
+
+#options, #cont_After_Title {
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#tbl_name {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 200px;
+    height: 30px;
+}
+
+#panel-Heading {
+    width: 100%;
+    height: 70px;
+    background: #5492c9;
+    position: relative;
+}
+
+#panel_Title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 20px 0px 20px 10px;
+}
+
+.cont_before_Btn {
+    width: 230px;
+    height: 50px;
+}
+
+.cont_after_Btn {
+    width: 230px;
+    height: 50px;
+}
+
+.before_Btn {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.after_Btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="button"] {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #5492c9;
+    text-decoration: none;
+    color: #fff;
+    background: #5492c9;
+    font-size: 14px;
+    line-height: 0%;
+}
+
+input[type="button"]:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#exeBefore_Area,
+#exeAfter_Area {
+    resize: none;
+}
+
+#expBtn a {
+    position: absolute;
+    display: flex;
+    top: 70%;
+    left: 90%;
+    transform: translate(-70%, -90%);
+    -webkit-transform: translate(-70%, -90%);
+    -ms-transform: translate(-70%, -90%);
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 140px;
+    padding: 10px 25px;
+    color: #FFF;
+    font-weight: 600;
+    border-radius: 3px;
+    border-radius: 50px;
+    border-color: #fff;
+    border-style: solid;
+    text-decoration: none;
+}

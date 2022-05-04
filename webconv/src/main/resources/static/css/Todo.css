@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    font-size: 12px;
+}
+
+body {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #f3f1f1;
+}
+
+#contents {
+    float: right;
+    width: 80%;
+    background-color: #FFFFFF;
+    border: solid 1px #beccea;
+    margin-bottom: 2em;
+}
+
+#child_Contents {
+    padding: 0px 20px;
+}
+
+#options, #cont_After_Title {
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#panel-Heading {
+    width: 100%;
+    height: 70px;
+    background: #5492c9;
+    position: relative;
+}
+
+#panel_Title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 20px 0px 20px 10px;
+}
+
+
+.taskTest {
+    padding: 20px 0px 0px 0px;
+    margin: auto;
+    width: 650.16px;
+}
+
+.taskTest input[type="text"] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 650.16px;
+    padding: 0.3em;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    border: 1px solid #1b2538;
+    border-radius: 4px;
+    margin: 3px;
+}
+
+.calendar {
+    margin: 0 auto;
+    width: 650.16px;
+}
+
+.calendar input[type="text"] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 150.16px;
+    padding: 0.3em;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    border: 1px solid #1b2538;
+    border-radius: 4px;
+    margin: 3px;
+}
+
+tbody button {
+    border: none;
+    border-radius: 20px;
+    line-height: 24px;
+    padding: 0 8px;
+    background: #93ffab;
+    color: #000000;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+}
+
+.addButton button {
+    border: none;
+    border-radius: 20px;
+    line-height: 24px;
+    padding: 0 8px;
+    background: #93ffab;
+    color: #000000;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+}
+
+.addButton {
+    width: 70px;
+    position: relative;
+    top: -80px;
+    left: 800px;
+}
+
+thead th button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    color: #0099e4;
+}
+
+/* 入力ダイヤログのCSS
+   backgroundを先にcssを適用する必要がある
+   colorが先の場合、backgroundが適用されない
+   */
+
+.memoAreaTitle .ui-dialog-titlebar {
+    background: #93ffab;
+    color: #000000;
+}
+
+.memoAreaTitle .maBtnOk {
+    background: #93ffab;
+    color: #000000;
+}
+
+.memoAreaTitle .maBtnNg {
+    background: #93ffab;
+    color: #000000;
+}
+
+/*Elementに対してのCSS*/
+
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+#dataTtable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    border-bottom: 2px solid #0099e4;
+    color: #0099e4;
+}
+
+thead th {
+    padding: 0 8px;
+    line-height: 40px;
+}
+
+thead th.task {
+    width: 400px;
+}
+
+thead th.state {
+    width: 100px;
+}
+
+thead th.button {
+    width: 60px;
+}
+
+tbody td.button,
+tbody td.state {
+    text-align: center;
+}
+
+tbody tr td,
+tbody tr th {
+    border-bottom: 1px solid #ccc;
+    transition: all 0.4s;
+}
+
+tbody tr.done td,
+tbody tr.done th {
+    background: #93ffab;
+    color: #bbb;
+}
+
+tbody tr:hover td,
+tbody tr:hover th {
+    background: #f4fbff;
+}
+
+#expBtn a {
+    position: absolute;
+    display: flex;
+    top: 70%;
+    left: 90%;
+    transform: translate(-70%, -90%);
+    -webkit-transform: translate(-70%, -90%);
+    -ms-transform: translate(-70%, -90%);
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 140px;
+    padding: 10px 25px;
+    color: #FFF;
+    font-weight: 600;
+    border-radius: 3px;
+    border-radius: 50px;
+    border-color: #fff;
+    border-style: solid;
+    text-decoration: none;
+}

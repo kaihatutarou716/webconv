@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta http-equiv="contents-Type" contents="text/html; charset=UTF-8" />
+
+    <title>オンラインWEBツール</title>
+    <link rel="stylesheet" th:href="@{css/JsonFmt.css}" type="text/css" />
+    <script type="text/javascript" th:src="@{js/library/jquery/jquery.min.js}">charset = "UTF-8"</script>
+    <script type="text/javascript" th:src="@{js/Common.js}" charset="UTF-8"></script>
+    <script type="text/javascript" th:src="@{js/JsonFmt.js}" charset="UTF-8"></script>
+</head>
+
+<body>
+    <div id="header" th:include="Header">
+    </div>
+    <div id="side" th:include="SideMenu">
+    </div>
+    <br>
+    <div id="contents">
+        <div id="panel-Heading">
+            <h1 id="panel_Title">JSON整形ツール</h1>
+            <div id="expBtn">
+                <h1><a href="" onclick="onExpLink('JsonFmt.pdf');">説明書</a></h1>
+            </div>
+        </div>
+        <br>
+        <div id="child_Contents">
+            <h3 id="options">オプション</h3>
+            <table style="width:300px;">
+                <tbody>
+                    <tr align="left">
+                        <td width="90px;">インデント：</td>
+                        <td><label><select id="option01">
+                                    <option value="space0">0スペース</option>
+                                    <option value="space1">1スペース</option>
+                                    <option value="space2">2スペース</option>
+                                    <option value="space3">3スペース</option>
+                                    <option value="space4">4スペース</option>
+                                </select></label></td>
+                    </tr>
+                    <tr align="left">
+                        <td><br></td>
+                    </tr>
+                    <tr align="left">
+                        <td width="90px;">サンプル：</td>
+                        <td><label><select id="option50" onchange="changeSample()">
+                                    <option value="sampleOff">無</option>
+                                    <option value="sample01">JSON（インデント：0）</option>
+                                </select></label></td>
+                    </tr>
+                    <tr align="left">
+                        <td><br></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <p> <textarea rows="18" cols="110" id="exeBefore_Area" style="overflow:scroll;font-family:'ＭＳ ゴシック',
+            sans-serif;" wrap="off" placeholder="JSON文字列を入力"></textarea></p>
+            <div class="cont_before_Btn">
+                <div class="before_Btn">
+                    <input type="button" id="resetBtn" value="リセット" onclick="formReset('exeBefore_Area');">
+                    <input type="button" id="exeBtn" name="exeBtn" value="整形"
+                        onclick="dataFormat('JsonFmt','exeBefore_Area','exeAfter_Area');">
+                </div>
+            </div>
+            <br>
+            <h3 id="cont_After_Title">整形後</h3>
+            <div class="cont_after_Btn">
+                <div class="after_Btn">
+                    <input type="button" id="resetBtn" value="リセット" onclick="formReset('exeAfter_Area');">
+                    <input type="button" id="copyBtn" value="コピー" onclick="copyToClipBoard('exeAfter_Area');">
+                </div>
+            </div>
+
+            <p> <textarea rows="18" cols="110" id="exeAfter_Area" style="overflow:scroll;font-family:'ＭＳ ゴシック',
+            sans-serif;" wrap="off" placeholder="整形後のjsonを出力"></textarea></p>
+        </div>
+        <br>
+        <div id="footer">
+        </div>
+    </div>
+</body>
+
+</html>

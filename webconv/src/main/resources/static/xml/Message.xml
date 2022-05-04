@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<message>
+    <item>
+        <msgId>E001</msgId>
+        <message>クリップボードにコピーできませんでした</message>
+        <status>E</status>
+    </item>
+    <item>
+        <msgId>E002</msgId>
+        <message>{0}を入力してください</message>
+        <status>E</status>
+    </item>
+    <item>
+        <msgId>E003</msgId>
+        <message>入力フォーマットが正しくありません</message>
+        <status>E</status>
+    </item>
+    <item>
+        <msgId>E004</msgId>
+        <message>ヘッダー項目数と{0}行目のデータ数が一致しません</message>
+        <status>E</status>
+    </item>
+    <item>
+        <msgId>E005</msgId>
+        <message>ヘッダー項目しかありません</message>
+        <status>E</status>
+    </item>
+    <item>
+        <msgId>E006</msgId>
+        <message>範囲内({0})の数値を入力して下さい</message>
+        <status>E</status>
+    </item>
+    <item>
+        <msgId>E007</msgId>
+        <message>タイマーを設定してください！</message>
+        <status>E</status>
+    </item>
+</message>

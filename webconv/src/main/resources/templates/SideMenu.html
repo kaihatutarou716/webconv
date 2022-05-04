@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/SideMenu.css" type="text/css" />
+</head>
+
+<body>
+    <form action="" name="page_Form"></form>
+    <div id="side">
+        <div class="side_Box">
+            <h3>便利ツール</h3>
+            <ul>
+                <li><a href="javascript:void(0)" id="DmlCreate" onclick="getId(this)">DML自動生成</a></li>
+                <li><a href="javascript:void(0)" id="JsonFmt" onclick="getId(this)">JSON自動整形</a></li>
+                <li><a href="javascript:void(0)" id="Todo" onclick="getId(this)">Todoリスト</a></li>
+                <li><a href="javascript:void(0)" id="EasyTimer" onclick="getId(this)">簡単タイマー</a></li>
+                <li><a href="javascript:void(0)" id="ImgMcTool" onclick="getId(this)">画像モザイクツール</a></li>
+            </ul>
+        </div>
+        <div class="side_Box">
+            <h3>その他</h3>
+            <ul>
+                <li><a href="javascript:void(0)" id="Home" onclick="getId(this)">Home</a></li>
+                <li><a href="javascript:void(0)" id="MarlUsed" onclick="getId(this)">使用素材</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+
+    function getId(element) {
+
+        if (document.getElementById(element.id) != null) {
+            document.page_Form.action = element.id;
+            document.page_Form.method = "post";
+            document.forms.page_Form.submit();
+        }
+    };
+
+</script>
+
+</html>

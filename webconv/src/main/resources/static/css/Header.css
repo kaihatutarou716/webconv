@@ -1,0 +1,23 @@
+.header_Class {
+    box-sizing: border-box;
+    background-color: #5492c9;
+    width: 100%;
+    height: 110px;
+}
+
+#header_Name {
+    padding-top: 8px;
+    display: block;
+    color: #FFFFFF;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+#header_Content {
+    text-align: center;
+    padding-top: 2px;
+    font-size: 15px;
+    color: #FFFFFF;
+}

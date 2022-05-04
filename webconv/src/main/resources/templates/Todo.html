@@ -1,0 +1,91 @@
+<html>
+
+<head>
+  <meta http-equiv="contents-Type" contents="text/html; charset=UTF-8" />
+
+  <title>オンラインWEBツール</title>
+  <link rel="stylesheet" th:href="@{/css/library/jquery/jquery-ui-1.13.1.custom/jquery-ui.css}" type="text/css" />
+  <link rel="stylesheet" th:href="@{/css/Todo.css}" type="text/css" />
+  <script type="text/javascript" th:src="@{/js/library/jquery/jquery.min.js}">charset = "UTF-8"</script>
+  <script type="text/javascript" th:src="@{/js/library/jquery/jquery-ui.min.js}">charset = "UTF-8"</script>
+  <script type="text/javascript" th:src="@{/js/library/jquery/jquery-ui-i18n.min.js}">charset = "UTF-8"</script>
+  <script type="text/javascript" th:src="@{/js/Common.js}" charset="UTF-8"></script>
+  <script type="text/javascript" th:src="@{/js/Todo.js}" charset="UTF-8"></script>
+</head>
+
+<body>
+  <div id="header" th:include="Header">
+  </div>
+  <div id="side" th:include="SideMenu">
+  </div>
+  <br>
+  <div id="contents">
+    <div id="panel-Heading">
+      <h1 id="panel_Title">Todoリスト</h1>
+      <div id="expBtn">
+        <h1><a href="" onclick="onExpLink('Todo.pdf');">説明書</a></h1>
+    </div>
+    </div>
+    <br>
+    <div id="child_Contents">
+      <form name="inputForm" id="inputForm_id">
+        <div class="taskTest">
+          <input type="text" id="item" placeholder="タスク内容を入力">
+        </div>
+        <div class="calendar">
+          <input type="text" id="datepicker" placeholder="期限を入力">
+        </div>
+        <div class="addButton">
+          <button type="submit" onClick="submitItem();">追加</button>
+        </div>
+      </form>
+      <div id="app">
+        <div id="div_memoArea" style="display:none;">
+          <textarea name="memoArea" id="memoArea_id" value="1" cols="60" rows=11></textarea>
+        </div>
+        <table id="dataTtable">
+          <thead v-pre>
+            <form name="Formtable" id="Formtable_id" action="">
+              <tr>
+                <th class="task"><button id="tskButton">
+                    <font size=4>タスク</font>
+                  </button></th>
+                <th class="deadLine"><button id="dieButton">
+                    <font size=4>期限</font>
+                  </button></th>
+                <th class="state"><button id="steButton">
+                    <font size=4>状態</font>
+                  </button></th>
+                <th class="delBtn"><button id="btnButton">
+                    <font size=4>-</font>
+                  </button></th>
+              </tr>
+            </form>
+          </thead>
+          <tbody>
+            <!--javaScript でリストを追加-->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br>
+    <div id="footer">
+    </div>
+  </div>
+  </div>
+</body>
+
+<!--カレンダー表示-->
+<script type="text/javascript">
+  $(function () {
+    $.datepicker.setDefaults($.datepicker.regional["ja"]);
+    $("#datepicker").datepicker();
+  });
+</script>
+
+<!--データ読み込む処理-->
+<script type="text/javascript">
+  window.onload = onLoad;
+</script>
+
+</html>

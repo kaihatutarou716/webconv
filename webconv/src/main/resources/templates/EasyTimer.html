@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta http-equiv="contents-Type" contents="text/html; charset=UTF-8" />
+
+    <title>オンラインWEBツール</title>
+    <link rel="stylesheet" th:href="@{css/EasyTimer.css}" type="text/css" />
+    <script type="text/javascript" th:src="@{js/library/jquery/jquery.min.js}">charset = "UTF-8"</script>
+    <script type="text/javascript" th:src="@{js/Common.js}" charset="UTF-8"></script>
+    <script type="text/javascript" th:src="@{js/EasyTimer.js}" charset="UTF-8"></script>
+</head>
+
+<body>
+    <div id="header" th:include="Header">
+    </div>
+    <div id="side" th:include="SideMenu">
+    </div>
+    <br>
+    <div id="contents">
+        <div id="panel-Heading">
+            <h1 id="panel_Title">簡単タイマー</h1>
+            <div id="expBtn">
+                <h1><a href="" onclick="onExpLink('EasyTimer.pdf');">説明書</a></h1>
+            </div>
+        </div>
+        <br>
+        <div id="child_Contents">
+            <h3 id="options">オプション</h3>
+            <table style="width:350px;">
+                <tbody>
+                    <tr align="left">
+                        <td width="90px;">音声：</td>
+                        <td><label><select id="option01">
+                                    <option value="audioOn">オン</option>
+                                    <option value="audioOff">オフ</option>
+                                </select></label></td>
+                        <td width="140px;">タイマー終了音：</td>
+                        <td><label><select id="option02">
+                                    <option value="sound01">目覚まし音</option>
+                                    <option value="sound02">ニワトリ</option>
+                                    <option value="soundOff">-</option>
+                                </select></label></td>
+                    </tr>
+                    <tr align="left">
+                        <td><br></td>
+                    </tr>
+                    <tr align="left">
+                        <td width="90px;">サンプル：</td>
+                        <td><label><select id="option50" onchange="changeSample()">
+                                    <option value="sampleOff">無</option>
+                                    <option value="sample01">00:00:10</option>
+                                    <option value="sample02">00:01:00</option>
+                                </select></label></td>
+                    </tr>
+                    <tr align="left">
+                        <td><br></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p id="timerText">00:00:30</p>
+            <br>
+            <br>
+            <div class="cont_Timer_Btn">
+                <div class="timer_Btn">
+                    <input type="button" id="startBtn" value="スタート" onclick="startClick();">
+                    <input type="button" id="stopBtn" value="ストップ" onclick="stopClick();">
+                </div>
+            </div>
+            <div class="timerBox">
+                <span class="timerBox_Title">タイマー設定</span>
+                <br>
+                <p>タイマーを設定して下さい。</p>
+                <div id="timer-Group">
+                    <div class="hour-Group">
+                        <label for="hour-Lbl">時間:</label>
+                        <input type="number" id="hour-Id" step="1" min="0" max="23" value="0">
+                    </div>
+                    <div class="minute-Group">
+                        <label for="minute-Lbl">分:</label>
+                        <input type="number" id="minute-Id" step="1" min="0" max="59" value="0">
+                    </div>
+                    <div class="second-Group">
+                        <label for="second-Lbl">秒:</label>
+                        <input type="number" id="second-Id" step="1" min="0" max="59" value="0">
+                    </div>
+                    <input type="button" id="timerBtn" value="設定" onclick="timerClick();">
+                </div>
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+</body>
+
+</html>

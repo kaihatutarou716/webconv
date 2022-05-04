@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    font-size: 12px;
+}
+
+body {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #f3f1f1;
+}
+
+#contents {
+    float: right;
+    width: 80%;
+    background-color: #FFFFFF;
+    border: solid 1px #beccea;
+    margin-bottom: 2em;
+}
+
+#child_Contents {
+    padding: 0px 20px;
+    width: 70%;
+}
+
+#options, #cont_After_Title {
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#panel-Heading {
+    width: 100%;
+    height: 70px;
+    background: #5492c9;
+    position: relative;
+}
+
+#panel_Title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 20px 0px 20px 0px;
+}
+
+.timer_Btn {
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#startBtn, #stopBtn {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #5492c9;
+    text-decoration: none;
+    color: #fff;
+    background: #5492c9;
+    font-size: 14px;
+    line-height: 0%;
+}
+
+input[type="button"]:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#timerText {
+    text-align: left;
+    color: #0af;
+    text-shadow: 0 1px rgb(255 255 255 / 50%);
+    height: 65px;
+    line-height: 65px;
+    font-size: 65px;
+}
+
+.timerBox {
+    width: 350px;
+    height: 80px;
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 2px #0099e4;
+    border-radius: 8px;
+}
+
+.timerBox .timerBox_Title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 2;
+    font-size: 14px;
+    background: #FFF;
+    color: #0099e4;
+    font-weight: bold;
+}
+
+.timerBox p {
+    margin: 0;
+    padding: 0;
+}
+
+#timer-Group {
+    width: 260px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#timerBtn {
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#expBtn a {
+    top: 70%;
+    left: 90%;
+    position: absolute;
+    display: flex;
+    transform: translate(-70%, -90%);
+    -webkit-transform: translate(-70%, -90%);
+    -ms-transform: translate(-70%, -90%);
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 140px;
+    padding: 10px 25px;
+    color: #FFF;
+    font-weight: 600;
+    border-radius: 3px;
+    border-radius: 50px;
+    border-color: #fff;
+    border-style: solid;
+    text-decoration: none;
+}

@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <meta http-equiv="contents-Type" contents="text/html; charset=UTF-8" />
+
+    <title>オンラインWEBツール</title>
+    <script type="text/javascript" th:src="@{js/library/jquery/jquery.min.js}" charset="UTF-8"></script>
+    <script type="text/javascript" th:src="@{js/Common.js}" charset="UTF-8"></script>
+</head>
+
+<body>
+    <div id="header" th:include="Header">
+    </div>
+    <div id="side" th:include="SideMenu">
+    </div>
+    <br>
+    <div id="contents">
+        <div id="panel-Heading">
+            <h1 id="panel_Title">画像モザイクツール</h1>
+            <div id="expBtn">
+                <h1><a href="" onclick="onExpLink('ImgMcTool.pdf');">説明書</a></h1>
+            </div>
+        </div>
+        <br>
+        <div id="child_Contents">
+            <h3 id="options">オプション</h3>
+            <table style="width:300px;">
+                <tbody>
+                    <tr align="left">
+                        <td width="150px;">モザイク度：</td>
+                        <td width="200px;"><input type="range" value="1" min="1" max="50" step="1" id="slider" 
+                            oninput="document.getElementById('output1').value=this.value"><output id="output1">&nbsp;&nbsp;1</output></td>
+                    </tr>
+                    <tr align="left">
+                        <td><br></td>
+                    </tr>
+                    <tr align="left">
+                        <td width="90px;">サンプル：</td>
+                        <td><label><select id="option50">
+                                    <option value="sampleOff">無</option>
+                                    <option value="sample01">犬</option>
+                                    <option value="sample02">猫</option>
+                                </select></label></td>
+                    </tr>
+                    <tr align="left">
+                        <td><br></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <form method="post" enctype="multipart/form-data">
+                <div id="dragDropArea">
+                    <div class="drag-drop-inside">
+                        <p class="drag-drop-info">ここにファイルをドロップ</p>
+                        <p>または</p>
+                        <p class="drag-drop-buttons">
+                           <input id="fileInput" type="file" accept="image/*" value="ファイルを選択" name="photo">
+                        </p>
+                        <canvas id="previewArea"></canvas>
+                    </div>
+                </div>
+            </form>
+            <div class="cont_before_Btn">
+                <div class="before_Btn">
+                    <input type="button" id="resetBtn" value="削除" onclick="canvasReset('previewArea');">
+                    <input type="button" id="downLoadBtn" value="ダウンロード" onclick="picDownLoad();">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="footer">
+        </div>
+    </div>
+</body>
+</html>
+<link rel="stylesheet" th:href="@{css/ImgMcTool.css}" type="text/css" />
+<script type="text/javascript" th:src="@{js/ImgMcTool.js}" charset="UTF-8"></script>
